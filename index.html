@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <!-- Обязательные метатеги -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="slick.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Курьерская служба</title>
+</head>
+
+<body>
+    <header class="p-3 text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="mb-2 mb-lg-0">
+                    <svg class="bi me-2" width="146" height="37" viewBox="0 0 146 37" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M40.7457 28.01V20.73C40.7457 18.5567 41.8324 17.47 44.0057 17.47H48.5857C50.7591 17.47 51.8457 18.5567 51.8457 20.73V28.03C51.8457 29.87 51.0524 30.91 49.4657 31.15L50.7857 33.75L50.4857 34.27H48.3857L46.8657 31.27H44.0057C41.8324 31.27 40.7457 30.1834 40.7457 28.01ZM43.1857 28.19C43.1857 28.7634 43.4791 29.05 44.0657 29.05H48.5257C49.1124 29.05 49.4057 28.7634 49.4057 28.19V20.55C49.4057 19.9767 49.1124 19.69 48.5257 19.69H44.0657C43.4791 19.69 43.1857 19.9767 43.1857 20.55V28.19ZM54.7673 28.11V20.77H57.1073V28.31C57.1073 28.9234 57.414 29.23 58.0273 29.23H61.3273V20.77H63.6673V31.27H57.9273C55.8206 31.27 54.7673 30.2167 54.7673 28.11ZM66.5837 31.27V22.07C67.0637 21.2034 67.9837 20.77 69.3437 20.77H71.4437L72.5037 21.55V22.81H69.8837C69.4304 22.81 69.1104 22.9234 68.9237 23.15V31.27H66.5837ZM74.4553 18.95V16.57H76.9153V18.95H74.4553ZM74.5153 31.27V20.77H76.8553V31.27H74.5153ZM82.4473 31.27C80.3406 31.27 79.2873 30.23 79.2873 28.15C79.2873 26.07 80.3406 25.03 82.4473 25.03H85.5273V23.73C85.5273 23.1167 85.2206 22.81 84.6073 22.81H80.3673V21.55L81.4073 20.77H84.7273C86.8206 20.77 87.8673 21.8234 87.8673 23.93V31.27H82.4473ZM81.6273 28.31C81.6273 28.9234 81.934 29.23 82.5473 29.23H85.5273V26.85H82.5473C81.934 26.85 81.6273 27.15 81.6273 27.75V28.31ZM90.7048 31.27V22.07C91.1848 21.2034 92.1048 20.77 93.4648 20.77H95.5648L96.6248 21.55V22.81H94.0048C93.5515 22.81 93.2315 22.9234 93.0448 23.15V31.27H90.7048ZM98.6364 31.27V16.47H100.976V20.77H104.396C106.49 20.77 107.536 21.8234 107.536 23.93V28.11C107.536 30.2167 106.49 31.27 104.396 31.27H98.6364ZM100.976 29.23H104.276C104.89 29.23 105.196 28.9234 105.196 28.31V23.73C105.196 23.1167 104.89 22.81 104.276 22.81H100.976V29.23ZM110.215 28.11V23.93C110.215 21.8234 111.268 20.77 113.375 20.77H116.175C118.268 20.77 119.315 21.8234 119.315 23.93V28.11C119.315 30.2167 118.268 31.27 116.175 31.27H113.375C111.268 31.27 110.215 30.2167 110.215 28.11ZM112.555 28.31C112.555 28.9234 112.861 29.23 113.475 29.23H116.055C116.668 29.23 116.975 28.9234 116.975 28.31V23.73C116.975 23.1167 116.668 22.81 116.055 22.81H113.475C112.861 22.81 112.555 23.1167 112.555 23.73V28.31ZM121.232 30.87L124.752 25.95L121.332 21.17L121.532 20.77H123.692L126.072 24.21L128.472 20.77H130.632L130.832 21.17L127.412 25.95L130.932 30.87L130.752 31.27H128.572L126.072 27.69L123.572 31.27H121.412L121.232 30.87Z"
+                            fill="#F95C19" />
+                        <path
+                            d="M18.823 36.3448L32.0301 27.2262C32.834 26.67 33.2829 25.7718 33.2959 24.8546L33.4443 15.8875C33.4655 14.611 32.6874 13.4625 31.5022 13.0205L23.1761 9.91595C22.3253 9.59637 21.3343 9.69427 20.5303 10.2504L7.33964 19.3934L18.8888 23.8515L18.823 36.3448Z"
+                            fill="#F95C19" />
+                        <path
+                            d="M20.7723 10.0124L7.48748 19.1847C6.67882 19.7441 6.22731 20.6476 6.21419 21.5702L6.06469 30.6026C6.04356 31.8791 6.82163 33.0276 8.00684 33.4696L16.3935 36.5968C17.2494 36.9182 18.2462 36.8197 19.0549 36.2603L32.3232 27.0636L22.6277 23.321C21.4709 22.8744 20.7104 21.7518 20.717 20.5004L20.7723 10.0124Z"
+                            fill="#CA3E02" />
+                    </svg>
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 text-warning">Home</a></li>
+                    <li><a href="#" class="nav-link px-2 text-black">Our services</a></li>
+                    <li><a href="#" class="nav-link px-2 text-black">About Us</a></li>
+                    <li><a href="#" class="nav-link px-2 text-black">What's new?</a></li>
+                </ul>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                    <input type="search" class="col-12 form-control form-control-dark" placeholder="Search..."
+                        aria-label="Search">
+                </form>
+
+                <div class="text-end">
+                    <button type="button" class="btn btn-warning">Contact us</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="images/Illustration-1.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                        width="700" height="500" loading="lazy">
+                </div>
+                <div class="col-lg-6">
+                    <p class="display-5 fw-bold lh-1 mb-3 h2">A trusted provider of <span class="fw-bolder">courier
+                            services.</span></p>
+                    <p class="lead h4">We deliver your products safely to your home in a reasonable time.</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <button type="button" class="btn btn-warning btn-lg px-4 me-md-2">Get started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="container">
+            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+                <h1 class="display-4 fw-bold text-warning">Services</h1>
+                <p class="display-5 fw-bold">Our services for you</p>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center card-group">
+                <!-- Это одна карточка! -->
+                <div class="col mb-3 mb-sm-0">
+                    <div class="card mb-4 rounded-3 shadow h-100">
+                        <div class="card-header bg-white py-3">
+                            <img src="images/iCON1.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title pricing-card-title">Business services</h2>
+                            <p class="text-start">We give you complete reliable delivery for your company. We will take
+                                full responsibility of the deliveries.</p>
+                            <ul class="mt-3 mb-4 text-start">
+                                <li>Corporate goods</li>
+                                <li>Shipment</li>
+                                <li>Accesories</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-outline-warning">Learn more</button>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- Это одна карточка! -->
+                <div class="col mb-3 mb-sm-0">
+                    <div class="card mb-4 rounded-3 shadow h-100">
+                        <div class="card-header bg-white py-3">
+                            <img src="images/Icon2.svg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title pricing-card-title">Statewide Services</h2>
+                            <p class="text-start">Offering home delivery around the city, where your products will be at
+                                your doorstep within 48-72 hours.</p>
+                            <ul class="mt-3 mb-4 text-start">
+                                <li>Personal Items</li>
+                                <li>Percels</li>
+                                <li>Documents</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-outline-warning">Learn more</button>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- Это одна карточка! -->
+                <div class="col mb-3 mb-sm-0">
+                    <div class="card mb-4 rounded-3 shadow h-100">
+                        <div class="card-header bg-white py-3">
+                            <img src="images/Icon3.svg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title pricing-card-title">Personal Services</h2>
+                            <p class="text-start">You can trust us to safely deliver your most sensitive documents to
+                                the specific area in a short time.</p>
+                            <ul class="mt-3 mb-4 text-start">
+                                <li>Gifts</li>
+                                <li>Package</li>
+                                <li>Documents</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-outline-warning">Learn more</button>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section>
+            <div class="container px-4 py-5">
+                <div class="row g-4 row-cols-2 row-cols-sm-5 row-cols-lg-5">
+
+                    <div class="feature col text-center">
+                        <div class="feature-icon">
+                            <svg class="bi" width="68" height="68" viewBox="0 0 68 68" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M35.1 48.6V43.2H29.7V48.6H35.1ZM37.8 48.6H27V42.2782C21.4624 40.3209 17.3067 35.4382 16.3897 29.487C10.1334 28.4114 5.40002 23.3897 5.40002 17.3572V10.8C5.40002 9.30886 6.60886 8.10002 8.10002 8.10002H16.2C16.2 6.60886 17.4089 5.40002 18.9 5.40002H45.9C47.3912 5.40002 48.6 6.60886 48.6 8.10002H56.7C58.1912 8.10002 59.4 9.30886 59.4 10.8V17.3572C59.4 23.3897 54.6666 28.4114 48.4103 29.487C47.4934 35.4382 43.3377 40.3209 37.8 42.2782V48.6ZM18.9 8.10002V27C18.9 34.4559 24.9442 40.5 32.4 40.5C39.8559 40.5 45.9 34.4559 45.9 27V8.10002H18.9ZM56.7 17.3572V10.8H48.6V26.6967C53.2864 25.6201 56.7 21.8079 56.7 17.3572ZM16.2 10.8H8.10002V17.3572C8.10002 21.8079 11.5137 25.6201 16.2 26.6967V10.8Z"
+                                    fill="#222132" />
+                                <path
+                                    d="M43.2 48.6C44.6912 48.6 45.9 49.3118 45.9 51.3V56.7C45.9 58.6882 44.6912 59.4 43.2 59.4H21.6C20.1089 59.4 18.9 58.6882 18.9 56.7V51.3C18.9 49.3118 20.1089 48.6 21.6 48.6H43.2ZM21.6 56.7H43.2V51.3H21.6V56.7Z"
+                                    fill="#222132" />
+                            </svg>
+                        </div>
+                        <h2 class="text-warning">26+</h2>
+                        <p>Awards won</p>
+                    </div>
+
+                    <div class="feature col text-center">
+                        <div class="feature-icon">
+                            <svg class="bi" width="68" height="68" viewBox="0 0 68 68" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M30.3333 9.19532L16.3333 3.11003V40.4493C16.524 40.4324 16.718 40.4626 16.8975 40.5399L30.3333 46.3285V9.19532ZM32.6667 10.1113V47.3338L46.6667 40.8653V3.76898L33.1728 10.0038C33.0125 10.0779 32.8394 10.1138 32.6667 10.1113ZM14.001 4.20676L2.33333 9.69332V46.7931L14.0745 41.4105C14.0264 41.2826 14 41.1441 14 40.9994V4.2767C14 4.2533 14.0003 4.22999 14.001 4.20676ZM1.65286 49.6719C0.880064 50.0262 0 49.4615 0 48.6114V8.94474C0 8.4886 0.265833 8.0743 0.680477 7.88421L15.8324 0.77282C16.1326 0.635218 16.477 0.631249 16.7802 0.761897L32.6668 7.66724L47.344 0.88566C48.1171 0.528449 49 1.0931 49 1.94474V41.6114C49 42.0663 48.7356 42.4797 48.3227 42.6705L33.1728 49.6705C32.872 49.8095 32.5262 49.814 32.2219 49.6829L16.4506 42.8881L1.65286 49.6719Z"
+                                    fill="#222132" />
+                            </svg>
+                        </div>
+                        <h2 class="text-warning">65+</h2>
+                        <p>States covered</p>
+                    </div>
+
+                    <div class="feature col text-center">
+                        <div class="feature-icon">
+                            <svg width="68" height="68" viewBox="0 0 68 68" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_301_450)">
+                                    <path
+                                        d="M21.3431 36.5557V47.831C21.3431 48.4753 20.8122 48.9976 20.1574 48.9976C19.5025 48.9976 18.9716 48.4753 18.9716 47.831V36.5555L12.0945 27.5334C11.7016 27.0179 11.8078 26.2867 12.3316 25.9001C12.8555 25.5135 13.5987 25.6179 13.9917 26.1334L20.1574 34.2223L26.3232 26.1334C26.7161 25.6179 27.4593 25.5135 27.9832 25.9001C28.5071 26.2867 28.6133 27.0179 28.2204 27.5334L21.3431 36.5557ZM15.5328 10.0227C13.5005 12.6425 11.0781 14.0022 8.30017 14.0024C7.64531 14.0024 7.11441 13.4801 7.11438 12.8358C7.11435 12.1914 7.64518 11.6691 8.30004 11.669C10.5844 11.6689 12.5991 10.3438 14.3962 7.54376C14.8368 6.85722 15.8377 6.81248 16.3398 7.45689C18.6733 10.452 23.7631 11.159 31.7469 9.33821C32.3848 9.19272 33.0218 9.58362 33.1697 10.2113C33.3176 10.839 32.9203 11.4658 32.2823 11.6113C24.4283 13.4025 18.8124 12.9299 15.5328 10.0227ZM27.2723 39.669C26.6174 39.6693 26.0863 39.1473 26.086 38.5029C26.0856 37.8586 26.6162 37.336 27.2711 37.3357L32.014 37.3333C32.6689 37.333 33.2 37.8551 33.2003 38.4994C33.2007 39.1437 32.6701 39.6663 32.0152 39.6667L27.2723 39.669Z"
+                                        fill="#222132" />
+                                    <path
+                                        d="M13.0531 25.7958C8.45101 28.0177 2.37145 34.9286 2.37145 38.5497V44.6335C2.37145 45.6271 2.37145 45.9993 2.37145 46.5815L37.9432 46.6234C37.9432 46.4155 37.9432 46.1778 37.9432 45.7761V38.5497C37.9432 35.1782 31.6517 28.153 27.3062 25.7627C25.3877 27.1925 23.0034 28 20.1573 28C17.3333 28 14.9639 27.205 13.0531 25.7958ZM11.2255 24.1098C8.4911 20.9919 7.11435 16.2466 7.11435 10.7917C7.11435 3.57366 12.1582 0 20.1573 0C28.1564 0 33.2003 3.57366 33.2003 10.7917C33.2003 16.2388 31.8275 20.9783 29.1009 24.0964C34.0482 27.1211 40.3147 34.3231 40.3147 38.5497V47.7482C40.3147 48.3925 39.7838 48.9149 39.1289 48.9149H1.18573C0.530867 48.9149 0 48.3925 0 47.7482V38.5497C0 34.1155 6.03276 27.0127 11.2255 24.1098ZM20.1573 25.6667C27.1576 25.6667 30.8289 19.4074 30.8289 10.7917C30.8289 5.0583 26.9828 2.33333 20.1573 2.33333C13.3318 2.33333 9.4858 5.0583 9.4858 10.7917C9.4858 19.4074 13.157 25.6667 20.1573 25.6667Z"
+                                        fill="#222132" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_301_450">
+                                        <rect width="40.3147" height="49" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h2 class="text-warning">689K+</h2>
+                        <p>Happy clients</p>
+                    </div>
+
+                    <div class="feature col text-center">
+                        <div class="feature-icon">
+                            <svg width="68" height="68" viewBox="0 0 68 68" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_301_460)">
+                                    <path
+                                        d="M47.4349 16.4706V18.8235H39.204C37.2558 18.8235 35.6764 17.2434 35.6764 15.2941V10.5882C35.6764 8.63901 37.2558 7.05884 39.204 7.05884H47.4349V9.41178H39.204C38.5546 9.41178 38.0281 9.9385 38.0281 10.5882V15.2941C38.0281 15.9439 38.5546 16.4706 39.204 16.4706H47.4349ZM5.10449 15.2941C5.10449 14.6444 5.63094 14.1177 6.28034 14.1177C6.92974 14.1177 7.45618 14.6444 7.45618 15.2941V24.7059C7.45618 25.3556 6.92974 25.8824 6.28034 25.8824C5.63094 25.8824 5.10449 25.3556 5.10449 24.7059V15.2941ZM21.5663 20C21.5663 19.3503 22.0928 18.8235 22.7422 18.8235C23.3916 18.8235 23.918 19.3503 23.918 20V24.7059C23.918 25.3556 23.3916 25.8824 22.7422 25.8824C22.0928 25.8824 21.5663 25.3556 21.5663 24.7059V20ZM39.204 40C35.957 40 33.3247 37.3664 33.3247 34.1177C33.3247 30.8689 35.957 28.2353 39.204 28.2353C42.451 28.2353 45.0832 30.8689 45.0832 34.1177C45.0832 37.3664 42.451 40 39.204 40ZM39.204 37.6471C41.1522 37.6471 42.7315 36.0669 42.7315 34.1177C42.7315 32.1684 41.1522 30.5883 39.204 30.5883C37.2558 30.5883 35.6764 32.1684 35.6764 34.1177C35.6764 36.0669 37.2558 37.6471 39.204 37.6471ZM13.3354 40C10.0884 40 7.45618 37.3664 7.45618 34.1177C7.45618 30.8689 10.0884 28.2353 13.3354 28.2353C16.5824 28.2353 19.2146 30.8689 19.2146 34.1177C19.2146 37.3664 16.5824 40 13.3354 40ZM13.3354 37.6471C15.2836 37.6471 16.8629 36.0669 16.8629 34.1177C16.8629 32.1684 15.2836 30.5883 13.3354 30.5883C11.3872 30.5883 9.80787 32.1684 9.80787 34.1177C9.80787 36.0669 11.3872 37.6471 13.3354 37.6471Z"
+                                        fill="#222132" />
+                                    <path
+                                        d="M7.57379 32.9412H3.92865C1.98045 32.9412 0.401123 31.361 0.401123 29.4118V27.0588C0.401123 25.1096 1.98045 23.5294 3.92865 23.5294H28.835C28.6968 23.1454 28.6214 22.7307 28.6214 22.2981V8.89787C28.6159 9.20023 28.5692 9.50602 28.4781 9.80883L25.9586 18.1817C25.5055 19.6873 24.0706 20.7301 22.4169 20.8185L15.7918 21.1726C15.589 21.191 15.3778 21.1568 15.1778 21.0606L2.49017 14.9607C0.907013 14.2288 0.0838774 12.3971 0.514839 10.6564L2.472 2.75154C2.90323 1.0098 4.4735 -0.162231 6.19455 0.0183145L20.3651 0.000275433C20.6676 -0.00624685 20.9725 0.103309 21.2073 0.330209L26.9422 5.87156C27.9835 6.53885 28.6007 7.62718 28.6214 8.77812V5.9372C28.6214 3.95767 30.2007 2.35294 32.1489 2.35294C32.3158 2.35294 32.4825 2.36498 32.6478 2.38896L44.8599 4.16161C46.2798 4.36771 47.4354 5.42675 47.7833 6.84054L49.6812 14.5544C49.7512 14.8387 49.7866 15.1307 49.7866 15.4238V22.2981C49.7866 23.2205 49.4436 24.0616 48.8802 24.6968C49.4436 25.3223 49.7866 26.1505 49.7866 27.0588V29.4118C49.7866 31.361 48.2072 32.9412 46.259 32.9412H44.9656C44.7892 32.0719 44.4213 31.2723 43.9078 30.5882L43.9106 30.5882H46.259C46.9084 30.5882 47.4349 30.0615 47.4349 29.4118V27.0588C47.4349 26.4091 46.9084 25.8824 46.259 25.8824H3.92865C3.27925 25.8824 2.75281 26.4091 2.75281 27.0588V29.4118C2.75281 30.0615 3.27925 30.5882 3.92865 30.5882H8.12273C8.28011 30.5882 8.43028 30.6192 8.56747 30.6753C8.08743 31.3398 7.74272 32.1085 7.57379 32.9412ZM18.08 30.6432C18.1924 30.6075 18.3121 30.5882 18.4363 30.5882H34.4967H34.5002C33.9867 31.2723 33.6187 32.0719 33.4424 32.9412H19.097C18.9254 32.0951 18.5722 31.315 18.08 30.6432ZM21.0376 3.43728L17.2139 18.7402L22.2914 18.4689C22.9885 18.4316 23.5503 18.0233 23.7067 17.5034L26.2262 9.1305C26.3704 8.65151 26.1483 8.13051 25.6214 7.82069L25.4002 7.65264L21.0376 3.43728ZM32.1489 4.74244C31.4995 4.74244 30.9731 5.27735 30.9731 5.9372V22.2981C30.9731 22.9579 31.4995 23.4928 32.1489 23.4928H46.259C46.9084 23.4928 47.4349 22.9579 47.4349 22.2981V15.4238C47.4349 15.3261 47.4231 15.2288 47.3998 15.134L45.5018 7.42008C45.3859 6.94881 45.0006 6.5958 44.5274 6.5271L32.3152 4.75445C32.2601 4.74646 32.2045 4.74244 32.1489 4.74244ZM6.12868 2.37134L5.97524 2.36148C5.44087 2.2918 4.91294 2.67812 4.75469 3.31731L2.79753 11.2222C2.63195 11.891 2.9401 12.5767 3.49262 12.8323L14.8962 18.3148L18.884 2.3551L6.12868 2.37134Z"
+                                        fill="#222132" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_301_460">
+                                        <rect width="49.3854" height="40" fill="white"
+                                            transform="translate(0.401123)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h2 class="text-warning">130M+</h2>
+                        <p>Goods delivered</p>
+                    </div>
+
+                    <div class="feature col-12 col-sm-1 text-center">
+                        <div class="feature-icon">
+                            <svg width="68" height="68" viewBox="0 0 68 68" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_301_470)">
+                                    <path
+                                        d="M21.5192 28H28.5742V23.3333H21.5192V28ZM30.9259 21V28.2333C30.9259 29.3931 29.9783 30.3333 28.8094 30.3333H21.284C20.1151 30.3333 19.1675 29.3931 19.1675 28.2333V21H30.9259ZM14.4641 9.33333V5.83333C14.4641 2.61167 17.0963 0 20.3433 0H29.7501C32.9971 0 35.6293 2.61167 35.6293 5.83333V9.33333H14.4641ZM33.2776 7V5.83333C33.2776 3.90034 31.6983 2.33333 29.7501 2.33333H20.3433C18.3951 2.33333 16.8158 3.90034 16.8158 5.83333V7H33.2776Z"
+                                        fill="#222132" />
+                                    <g filter="url(#filter0_d_301_470)">
+                                        <path
+                                            d="M47.3878 22.1672C46.4052 22.8995 45.1838 23.3335 43.8602 23.3335H6.23322C4.90969 23.3335 3.6883 22.8995 2.70569 22.1672V33.8335C2.70569 37.0551 5.33791 39.6668 8.58491 39.6668H41.5085C44.7555 39.6668 47.3878 37.0551 47.3878 33.8335V22.1672ZM3.88154 7.00012H46.2119C48.1601 7.00012 49.7394 8.56713 49.7394 10.5001V33.8335C49.7394 38.3438 46.0543 42.0001 41.5085 42.0001H8.58491C4.03911 42.0001 0.354004 38.3438 0.354004 33.8335V10.5001C0.354004 8.56713 1.93333 7.00012 3.88154 7.00012ZM3.88154 9.33346C3.23214 9.33346 2.70569 9.85579 2.70569 10.5001V17.5001C2.70569 19.4331 4.28502 21.0001 6.23322 21.0001H43.8602C45.8084 21.0001 47.3878 19.4331 47.3878 17.5001V10.5001C47.3878 9.85579 46.8613 9.33346 46.2119 9.33346H3.88154Z"
+                                            fill="#222132" />
+                                        <path
+                                            d="M47.8878 22.1672V21.171L47.089 21.7663C46.19 22.4363 45.0728 22.8335 43.8602 22.8335H6.23322C5.02068 22.8335 3.90346 22.4363 3.00448 21.7663L2.20569 21.171V22.1672V33.8335C2.20569 37.3349 5.06547 40.1668 8.58491 40.1668H41.5085C45.028 40.1668 47.8878 37.3349 47.8878 33.8335V22.1672ZM3.88154 7.50012H46.2119C47.8877 7.50012 49.2394 8.84695 49.2394 10.5001V33.8335C49.2394 38.064 45.7819 41.5001 41.5085 41.5001H8.58491C4.31155 41.5001 0.854004 38.064 0.854004 33.8335V10.5001C0.854004 8.84695 2.20578 7.50012 3.88154 7.50012ZM3.88154 8.83346C2.95969 8.83346 2.20569 9.57596 2.20569 10.5001V17.5001C2.20569 19.7129 4.01258 21.5001 6.23322 21.5001H43.8602C46.0809 21.5001 47.8878 19.7129 47.8878 17.5001V10.5001C47.8878 9.57596 47.1338 8.83346 46.2119 8.83346H3.88154Z"
+                                            stroke="black" />
+                                    </g>
+                                </g>
+                                <defs>
+                                    <filter id="filter0_d_301_470" x="-3.646" y="7.00012" width="57.3855" height="43"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                        <feOffset dy="4" />
+                                        <feGaussianBlur stdDeviation="2" />
+                                        <feComposite in2="hardAlpha" operator="out" />
+                                        <feColorMatrix type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                        <feBlend mode="normal" in2="BackgroundImageFix"
+                                            result="effect1_dropShadow_301_470" />
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_301_470"
+                                            result="shape" />
+                                    </filter>
+                                    <clipPath id="clip0_301_470">
+                                        <rect width="49.3854" height="42" fill="white"
+                                            transform="translate(0.354004)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </div>
+                        <h2 class="text-warning">130M+</h2>
+                        <p>Business hours</p>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Это секция с видео -->
+        <section>
+            <div class="container px-4 py-5 d-flex justify-content-center align-items-center" id="featured-4">
+
+                <iframe width="1320" height="580" src="https://www.youtube.com/embed/tHiWbpnM_EU"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+
+            </div>
+        </section>
+
+        <!-- Карусель -->
+        <section class="container">
+            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+                <h1 class="display-4 fw-bold text-warning">Testimonial</h1>
+                <p class="display-5 fw-bold">Our Awesome Clients</p>
+            </div>
+
+            <div class="slick-slider col-lg-12">
+                <div class="card-1 shadow">
+                    <p class="display-6 fw-bolder text-warning">Fantastic service!</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ducimus aliquid voluptatibus
+                        inventore? Optio cum illo libero recusandae in eum doloribus temporibus inventore odio maiores?
+                        Nobis maiores quaerat ipsum possimus.
+                        A dolore tenetur blanditiis! Laboriosam sint blanditiis est sunt nemo quis eligendi delectus?
+                        Nemo unde aliquid facilis voluptas aliquam maiores amet similique, sint nesciunt saepe, nulla
+                        soluta laborum! Error, fuga.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                            <img src="images/clarity_star-solid.png" alt="">
+                            <img src="images/clarity_star-solid.png" alt="">
+                            <img src="images/clarity_star-solid.png" alt="">
+                            <img src="images/clarity_star-solid.png" alt="">
+                            <img src="images/clarity_star-solid.png" alt="">
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex flex-column text-end px-2">
+                                <p class="m-0 shadow-new">
+                                    <span class="fw-bold">Yves Tanguy</span>
+                                    <br>
+                                    Chief Executive, DLF
+                                </p>
+                            </div>
+                            <div>
+                                <img src="images/Avatar.png" alt="Тётенька!">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-1 shadow">
+                    <p class="display-6 fw-bolder text-warning">Best quality!</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ducimus aliquid voluptatibus
+                        inventore? Optio cum illo libero recusandae in eum doloribus temporibus inventore odio maiores?
+                        Nobis maiores quaerat ipsum possimus.
+                        A dolore tenetur blanditiis! Laboriosam sint blanditiis est sunt nemo quis eligendi delectus?
+                        Nemo unde aliquid facilis voluptas aliquam maiores amet similique, sint nesciunt saepe, nulla
+                        soluta laborum! Error, fuga.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                            <img src="images/clarity_star-solid.png" alt="">
+                            <img src="images/clarity_star-solid.png" alt="">
+                            <img src="images/clarity_star-solid.png" alt="">
+                            <img src="images/clarity_star-solid.png" alt="">
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex flex-column text-end px-2">
+                                <p class="m-0 shadow-new">
+                                    <span class="fw-bold">Yves Tanguy</span>
+                                    <br>
+                                    Chief Executive, DLF
+                                </p>
+                            </div>
+                            <div>
+                                <img src="images/Avatar2.png" alt="Тётенька!">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-1 shadow">
+                    <p class="display-6 fw-bolder text-warning">Great job guys!</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ducimus aliquid voluptatibus
+                        inventore? Optio cum illo libero recusandae in eum doloribus temporibus inventore odio maiores?
+                        Nobis maiores quaerat ipsum possimus.
+                        A dolore tenetur blanditiis! Laboriosam sint blanditiis est sunt nemo quis eligendi delectus?
+                        Nemo unde aliquid facilis voluptas aliquam maiores amet similique, sint nesciunt saepe, nulla
+                        soluta laborum! Error, fuga.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                            <img src="images/clarity_star-solid.png" alt="">
+                            <img src="images/clarity_star-solid.png" alt="">
+                            <img src="images/clarity_star-solid.png" alt="">
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex flex-column text-end px-2">
+                                <p class="m-0 shadow-new">
+                                    <span class="fw-bold">Yves Tanguy</span>
+                                    <br>
+                                    Chief Executive, DLF
+                                </p>
+                            </div>
+                            <div>
+                                <img src="images/Avatar.png" alt="Тётенька!">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-1 shadow">
+                    <p class="display-6 fw-bolder text-warning">My recomendations!</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ducimus aliquid voluptatibus
+                        inventore? Optio cum illo libero recusandae in eum doloribus temporibus inventore odio maiores?
+                        Nobis maiores quaerat ipsum possimus.
+                        A dolore tenetur blanditiis! Laboriosam sint blanditiis est sunt nemo quis eligendi delectus?
+                        Nemo unde aliquid facilis voluptas aliquam maiores amet similique, sint nesciunt saepe, nulla
+                        soluta laborum! Error, fuga.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                            <img src="images/clarity_star-solid.png" alt="">
+                            <img src="images/clarity_star-solid.png" alt="">
+                            <img src="images/clarity_star-solid.png" alt="">
+                            <img src="images/clarity_star-solid.png" alt="">
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex flex-column text-end px-2">
+                                <p class="m-0 shadow-new">
+                                    <span class="fw-bold">Yves Tanguy</span>
+                                    <br>
+                                    Chief Executive, DLF
+                                </p>
+                            </div>
+                            <div>
+                                <img src="images/Avatar2.png" alt="Тётенька!">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- Блок с формой -->
+        <section>
+            <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+                <div class="row align-items-center g-lg-5 py-5">
+                    <div class="col-lg-6 text-center text-lg-start">
+                        <img class="d-block mx-auto" src="images/Illustration.png" alt="">
+                        <h1 class="display-4 fw-bold lh-1 mb-3">We will contact in the shortest time.</h1>
+                        <p class="col-lg-10 display-6">Monday to Friday, 9am-5pm.</p>
+                    </div>
+                    <div class="col-md-10 mx-auto col-lg-6">
+                        <form class="p-4 p-md-5 rounded-3">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="John Snow">
+                                <label for="floatingInput">Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInput"
+                                    placeholder="name@examlpe.com">
+                                <label for="floatingInput">E-mail</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" placeholder="Send a message here" id="floatingTextarea2"
+                                    style="height: 100px; resize: none;"></textarea>
+                                <label for="floatingTextarea2">Massage</label>
+                            </div>
+
+                            <button class="w-100 btn btn-lg btn-warning" type="submit">Send message 🚀</button>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map mb-5">
+            <div class="container px-4 py-5">
+                <div class="pricing-header mx-auto text-center">
+                    <h1 class="display-4 fw-bold text-warning">FIND US</h1>
+                    <p class="display-5 fw-bold">Access us easily</p>
+                </div>
+
+                <div class="container col-xxl-12">
+                    <div class="row flex-lg-row-reverse align-items-center g-5">
+
+                        <div class="col-lg-6">
+                            <div class="display-6 fw-bolder my-5">Contact with us</div>
+                            <div class="row d-flex align-items-center">
+                                <div class="col-2">
+                                    <i class="bi-geo-alt text-warning display-6"></i>
+                                </div>
+                                <div class="fs-5 col-10">
+                                    2277 Lorem Ave, San Diego, CA 22553
+                                </div>
+                                <div class="col-2">
+                                    <i class="bi-clock text-warning display-6"></i>
+                                </div>
+                                <div class="fs-5 col-10">
+                                    Monday - Friday: 10 am - 10pm<br>
+                                    Sunday: 11 am - 9pm
+                                </div>
+                                <div class="col-2">
+                                    <i class="bi-envelope text-warning display-6"></i>
+                                </div>
+                                <div class="fs-5 col-10">
+                                    info@quriarbox.com
+                                </div>
+                            </div>
+
+                            <div class="d-flex my-5 justify-content-around">
+                                <i class="bi-facebook display-6 mx-3"></i>
+                                <i class="bi-instagram display-6 mx-3"></i>
+                                <i class="bi-twitter display-6 mx-3"></i>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-12 col-lg-6">
+                            <iframe class="w-100"
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7331.759749671959!2d34.3706286316189!3d61.77950812536802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1647874830760!5m2!1sru!2sru"
+                                width="auto" height="420" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <!-- <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"> -->
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="w-50 btn btn-warning d-block mx-auto mt-5" type="submit">📞 Call us to delivery
+                    123-456789</button>
+
+            </div>
+        </section>
+
+        <section class="bg-dark text-white">
+            <div class="container px-4 py-5">
+                <div class="row align-items-center g-lg-5 py-2">
+                    <div class="col-lg-6 text-center text-lg-start">
+                        <h1 class="display-6 fw-bold lh-1 mb-3">Get an update every week</h1>
+                        <p class="col-lg-10">We ensure that your product is delivered in the safest possible manner, at
+                            the correct location, at the right time.</p>
+                    </div>
+                    <div class="col-md-10 mx-auto col-lg-6 flex-sm-column">
+                        <div class="text-warning h4 text-center">SUBSCRIBE TO NEWSLETTER</div>
+                        <form class="py-2 d-flex flex-sm-row flex-column">
+                            <div class="form-floating text-black me-sm-5 col-12 col-sm-8 mx-auto">
+                                <input type="email" class="form-control" id="floatingInput"
+                                    placeholder="name@examlpe.com">
+                                <label for="floatingInput">Enter your mail</label>
+                            </div>
+                            <button class="btn btn-warning col-12 col-sm-4 mx-auto my-3" type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="container-fluid bg-secondary text-white">
+        <div class="container px-4 py-5">
+            <div class="row">
+                <div class="col-12 mb-5 mb-sm-0 col-sm-4 d-flex flex-column justify-content-center align-items-center offset-sm-1">
+                    <img src="images/Logo.svg" alt="Logo" class="my-3">
+                    <p>The most trusted Courier <br> company in your area.</p>
+                </div>
+
+                <div class="col-4 col-sm-2 offset-sm-1">
+                    <h5>Other links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Blogs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Movers website</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Traffic update</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-4 col-sm-2">
+                    <h5>Services</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Corporate goods</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Artworks</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Documents</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-4 col-sm-2">
+                    <h5>Customer care</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About Us</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Contact Us</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Get Update</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <div class="container-fluid bg-dark text-white">
+        <div class="container px-4 py-0">
+            <div class="d-flex justify-content-between py-4">
+                <p>&copy; март 2022 </p>
+                <p>Автор 
+                    <a href="https://vk.com/panfav" class=" text-decoration-none">
+                        <span class="text-warning fw-bold">Алексей Панфилов</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    -->
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="slick.min.js"></script>
+
+    <script>
+
+        $('.slick-slider').slick({
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 3,
+            arrows: false,
+            variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        variableWidth: true,
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        variableWidth: true,
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    </script>
+
+</body>
+
+</html>
